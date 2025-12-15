@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int s=n*n;
+	int rev=0;
+	int sum=s;
+	while(sum!=0){
+	    int rem=sum%10;
+	    rev=rev*10+rem;
+	    sum=sum/10;
+	}
+	int a=0;
+	int b=rev;
+	while(b!=0){
+	    int rem2=b%10;
+	    a=a*10+rem2;
+	    b=b/10;
+	}
+	if(s==a){
+	    System.out.println("Adam");
+	}
+	else{
+	    System.out.println("not");
+	}
+	}
+}
